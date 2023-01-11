@@ -4,14 +4,11 @@ import { Link } from 'react-router-dom';
 class SearchBar extends React.Component {
 
 
-    handleFormSubmit = (event) => {
-        event.preventDefault();
-    }
-
+   
     render() {
 
         return  (
-            <form onSubmit={this.handleFormSubmit}>
+            <form onSubmit={(e) => (e.preventDefault)}
                 <div className="form-row mb-5">
                     <div className="col-10">
                         <input 
